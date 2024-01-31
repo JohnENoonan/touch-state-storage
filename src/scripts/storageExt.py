@@ -33,9 +33,14 @@ class StorageExt:
 
 	def Reset(self):
 		if len(self.owner.docked) == 1:
+			defs = self.owner.docked[0]
+			for row in defs.rows():
+				self.Set(row[0], row[1])
+		
+	def ResetToDefaults(self):
+		if len(self.owner.docked) == 1:
 			op.log.Verbose("Reset storage to defaults")
 			self.table_op.copy(self.owner.docked[0])
-		
 
 	def Clear(self):
 		self.table_op.clear()
