@@ -19,11 +19,11 @@ To interact with the storage tool you can:
 1. Use the Python API with the global shortcut `op.storage`. An example usage could be `op.storage.Set("Keyname", "value")`
 2. Select the underlying table in a Select DAT with the path `op.storage.op("state")` 
 
-![dat select](dat-select.png)
+![dat select](documentation/dat-select.png)
 
 3. Select the converted CHOP representation with a Select CHOP using the path `op.storage.op("state_chop")`. Please note that non-numerical values will be invalidly represented..
 
-![chop select](chop-select.png)
+![chop select](documentation/chop-select.png)
 
 ### Python API
 | Function | Args | Notes |
